@@ -169,3 +169,155 @@ string newMessage = new String(message);
 
 Console.WriteLine(newMessage);
 Console.WriteLine($"'o' appears {letterCount} times.");
+
+
+
+Console.WriteLine("a" == "a");
+Console.WriteLine("a" == "A");
+Console.WriteLine(1 == 2);
+
+string myValue = "a";
+Console.WriteLine(myValue == "a");
+
+// True
+// False
+// False
+// True
+
+
+string value1 = " a";
+string value2 = "A ";
+Console.WriteLine(value1 == value2); // false
+Console.WriteLine(value1.Trim() == value2.Trim()); // false
+Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower()); // true
+
+
+Console.WriteLine(value1 != value2); // True
+
+Console.WriteLine("a" != "a");
+Console.WriteLine("a" != "A");
+Console.WriteLine(1 != 2);
+
+string myValue1 = "a";
+Console.WriteLine(myValue1 != "a");
+
+// False
+// True
+// True
+// False
+
+// Greater than >
+// Less than <
+// Greater than or equal to >=
+// Less than or equal to <=
+
+Console.WriteLine(1 > 2);
+Console.WriteLine(1 < 2);
+Console.WriteLine(1 >= 1);
+Console.WriteLine(1 <= 1);
+
+// False
+// True
+// True
+// True
+
+string pangram = "The quick brown fox jumps over the lazy dog.";
+Console.WriteLine(pangram.Contains("fox"));
+Console.WriteLine(pangram.Contains("cow"));
+
+// True
+// False
+
+// madam
+
+
+Console.WriteLine(pangram.Contains("fox") == false); // False
+Console.WriteLine(!pangram.Contains("fox")); // True
+
+Console.WriteLine(!pangram.Contains("fox"));
+Console.WriteLine(!pangram.Contains("cow"));
+
+// FALSE
+//TRUE
+
+int saleAmount = 1001;
+int discount = 0;
+if (saleAmount > 1000)
+{
+    discount = 100;
+}
+else
+{
+    discount = 50;
+}
+Console.WriteLine($"Discount: {discount}");
+
+
+int disocunt1 = saleAmount > 1000 ? 100 : 50;
+// true/ false ?  true : false
+Console.WriteLine($"Discount: {disocunt1}");
+
+Console.WriteLine($"Discount: {(saleAmount > 1000 ? 100 : 50)}");
+
+
+string permission = "Admin|Manager";
+int level = 53;
+
+if (permission.Contains("Admin"))
+{
+    if (level > 55)
+    {
+        Console.WriteLine("Welcome, Super Admin user.");
+    }
+    else
+    {
+        Console.WriteLine("Welcome, Admin user.");
+    }
+}
+else if (permission.Contains("Manager"))
+{
+    if (level >= 20)
+    {
+        Console.WriteLine("Contact an Admin for access.");
+    }
+    else
+    {
+        Console.WriteLine("You do not have sufficient privileges.");
+    }
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
+
+
+// bool flag = true;
+// if (flag)
+// {
+//     int value = 10;
+//     Console.WriteLine("Inside of code block: " + value);
+// }
+// Console.WriteLine($"Outside of code block: {value}");
+
+// bool flag = true;
+// int value;
+
+// if (flag)
+// {
+//     value = 10;
+//     Console.WriteLine("Inside of code block: " + value);
+// }
+// Console.WriteLine("Outside of code block: " + value);
+
+
+bool flag = true;
+int value = 0;
+
+if (flag)
+{
+    value = 10;
+    Console.WriteLine("Inside of code block: " + value);
+}
+Console.WriteLine("Outside of code block: " + value);
+
+
