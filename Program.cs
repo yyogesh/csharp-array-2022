@@ -321,3 +321,47 @@ if (flag)
 Console.WriteLine("Outside of code block: " + value);
 
 
+// Write a C# Sharp program to check whether a given number is positive or negative. 
+
+int number = -10;
+
+if (number > 0)
+{
+    Console.WriteLine($"Number is positive : {number}");
+}
+else
+{
+    Console.WriteLine($"Number is negative : {number}");
+}
+
+// Write a C# Sharp program to find whether a given year is a leap year or not.
+//Write a C# Sharp program to read roll no, name and marks of three subjects and calculate the total, percentage and division.
+
+int year = 2000;
+
+if (year % 4 == 0)
+{
+    Console.WriteLine($"leap year : {number}");
+}
+else
+{
+    Console.WriteLine($"leap not a year : {number}");
+}
+
+Console.Write("\n\n");
+Console.Write("Check whether a given year is leap year or not:\n");
+Console.Write("----------------------------------------------");
+Console.Write("\n\n");
+Console.Write("Input an year : ");
+// cls
+int year1 = Convert.ToInt32(Console.ReadLine());
+
+if (year1 % 4 == 0)
+{
+    Console.WriteLine($"leap year : {year1}");
+}
+else
+{
+    Console.WriteLine($"leap not a year : {year1}");
+}
+
