@@ -365,3 +365,176 @@ else
     Console.WriteLine($"leap not a year : {year1}");
 }
 
+bool flag1 = true;
+if (flag1)
+{
+    Console.WriteLine(flag1);
+}
+
+
+if (flag1)
+    Console.WriteLine(flag1);
+
+if (flag1) Console.WriteLine(flag1);
+
+
+string name = "steve";
+if (name == "bob") Console.WriteLine("Found Bob");
+else if (name == "steve") Console.WriteLine("Found Steve");
+else Console.WriteLine("Found Chuck");
+
+if (name == "bob")
+{
+    Console.WriteLine("Found Bob");
+    Console.WriteLine("User found");
+}
+else if (name == "steve")
+{
+    Console.WriteLine("Found Steve");
+}
+else Console.WriteLine("Found Chuck");
+
+if (name == "bob")
+    Console.WriteLine("Found Bob");
+else if (name == "steve")
+    Console.WriteLine("Found Steve");
+else
+    Console.WriteLine("Found Chuck");
+
+
+
+
+int[] numbers = { 4, 8, 15, 16, 23, 42 };
+int totalSum = 0;
+bool found = false;
+
+foreach (int number12 in numbers)
+{
+    totalSum += number12;
+    if (number12 == 42) found = true;
+}
+
+if (found) Console.WriteLine("Set contains 42");
+
+Console.WriteLine($"Total: {totalSum}");
+
+
+int point = 20;
+string title = "";
+switch (point)
+{
+    case 10:
+        title = "You got 10 point";
+        break;
+    case 20:
+        title = "You got 20 point";
+        break;
+    case 30:
+        title = "You got 30 point";
+        break;
+    default:
+        title = "You got nothing";
+        break;
+}
+
+Console.WriteLine($"Title is {title}");
+
+
+
+int employeeLevel = 200;
+string employeeName = "John Smith";
+
+string title1 = "";
+switch (employeeLevel)
+{
+    case 100:
+        title1 = "Junior Associate";
+        break;
+    case 250:
+    case 200:
+        title1 = "Senior Associate";
+        break;
+    case 300:
+        title1 = "Manager";
+        break;
+    case 400:
+        title1 = "Senior Manager";
+        break;
+    default:
+        title1 = "Associate";
+        break;
+}
+
+Console.WriteLine($"{employeeName}, {title1}");
+
+// SKU = Stock Keeping Unit
+string sku = "01-MN-L";
+
+string[] product = sku.Split('-');
+
+string emailId = "Yogesh@gmail.com";
+
+string[] emailIds = emailId.Split('@');
+
+foreach (string item in product)
+{
+    Console.WriteLine($"Product item is :: {item}");
+}
+
+string type = "";
+string color = "";
+string size = "";
+
+if (product[0] == "01")
+{
+    type = "Sweat shirt";
+}
+else if (product[0] == "02")
+{
+    type = "T-Shirt";
+}
+else if (product[0] == "03")
+{
+    type = "Sweat pants";
+}
+else
+{
+    type = "Other";
+}
+
+
+if (product[1] == "BL")
+{
+    color = "Black";
+}
+else if (product[1] == "MN")
+{
+    color = "Maroon";
+}
+else
+{
+    color = "White";
+}
+
+if (product[2] == "S")
+{
+    size = "Small";
+}
+else if (product[2] == "M")
+{
+    size = "Medium";
+}
+else if (product[2] == "L")
+{
+    size = "Large";
+}
+else
+{
+    size = "One Size Fits All";
+}
+
+
+Console.WriteLine($"Product: {size} {color} {type}");
+
+
+
