@@ -538,3 +538,51 @@ Console.WriteLine($"Product: {size} {color} {type}");
 
 
 
+// foreach (string item in product)
+// {
+//     Console.WriteLine($"Product item is :: {item}");
+// }
+
+// where start from 1
+// where is should end: Increatment 1
+// Condition it should be less thn 10
+
+// int i = 0; it always on first time
+// i++ start from 2nd statement 
+// i < 10 condition to run the loop
+for (int i = 0; i <= 10; i++)
+{
+    Console.WriteLine(i);
+}
+
+// 10 9 8 7 ..... 0
+
+for (int i = 10; i >= 0; i--)
+{
+    Console.WriteLine(i);
+}
+
+
+// 3 6 9 12 15 18
+
+for (int i = 3; i <= 20; i += 3)
+{
+    Console.WriteLine(i);
+}
+
+
+for (int i = 0; i <= 10; i++)
+{
+    Console.WriteLine(i);
+    if (i == 7) break;
+}
+
+string[] names1 = { "Alex", "Eddie", "David", "Michael" };
+
+// names1[0] names1[1]  names1[2]  names1[3] 
+
+for (int i = 0; i < names1.Length; i++)
+{
+    Console.WriteLine($"name at {i} and value is {names1[i]}");
+}
+
