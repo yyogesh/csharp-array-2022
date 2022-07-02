@@ -586,3 +586,278 @@ for (int i = 0; i < names1.Length; i++)
     Console.WriteLine($"name at {i} and value is {names1[i]}");
 }
 
+// FizzBuzz rules:
+
+// Output values from 1 to 100, one number per line.
+// When the current value is divisible by 3, print the term Fizz next to the number.
+// When the current value is divisible by 5, print the term Buzz next to the number.
+// When the current value is divisible by both 3 and 5, print the term FizzBuzz next to the number.
+
+// 1
+// 2
+// 3 - Fizz
+// 4
+// 5 - Buzz
+// 6 - Fizz
+// 7
+// 8
+// 9 - Fizz
+// 10 - Buzz
+// 11
+// 12 - Fizz
+// 13
+// 14
+// 15 - FizzBuzz
+// 16
+// 17
+// 18 - Fizz
+// 19
+// 20 - Buzz
+// 21 - Fizz
+// 22
+// .
+// .
+
+for (int i = 1; i < 101; i++)
+{
+    if ((i % 3 == 0) && (i % 5 == 0))
+    {
+        Console.WriteLine($"{i} - FizzBuzz");
+    }
+    else if (i % 3 == 0)
+    {
+        Console.WriteLine($"{i} - Fizz");
+    }
+    else if (i % 5 == 0)
+    {
+        Console.WriteLine($"{i} - Buzz");
+    }
+    else
+        Console.WriteLine($"{i}");
+}
+
+
+Random random = new Random();
+int current = random.Next(1, 11);
+
+while (current >= 3)
+{
+    Console.WriteLine(current);
+    current = random.Next(1, 11);
+}
+
+Console.WriteLine($"Last number: {current}");
+
+int count = 0;
+
+while (count < 10)
+{
+    count++;
+    Console.WriteLine(count);
+}
+
+do
+{
+    count++;
+    Console.WriteLine(count);
+} while (count < 10);
+
+
+int hero = 10;
+int monster = 10;
+
+Random dice = new Random();
+
+do
+{
+    int roll = dice.Next(1, 11); // 1
+    monster -= roll; // 9
+    Console.WriteLine($"Monster was damaged and lost {roll} health and now has {monster} health.");
+
+    if (monster <= 0) continue;
+
+    roll = dice.Next(1, 11); // 2
+    hero -= roll; // 8
+    Console.WriteLine($"Hero was damaged and lost {roll} health and now has {hero} health.");
+
+} while (hero > 0 && monster > 0);
+
+Console.WriteLine(hero > monster ? "Hero wins!" : "Monster wins!");
+
+// Monster was damaged and lost 1 health and now has 9 health.
+// Hero was damaged and lost 2 health and now has 8 health.
+// Monster was damaged and lost 1 health and now has 8 health.
+// Hero was damaged and lost 4 health and now has 4 health.
+// Monster was damaged and lost 7 health and now has 1 health.
+// Hero was damaged and lost 6 health and now has -2 health.
+// Monster wins!
+
+
+for (int i = 0; i < 10; i++)
+{
+    if (i == 4)
+    {
+        continue;
+    }
+    Console.WriteLine(i);
+}
+
+
+decimal myDecimal = 1.23456789m;
+float myFloat = (float)myDecimal;
+
+Console.WriteLine($"Decimal: {myDecimal}");
+Console.WriteLine($"Float: {myFloat}");
+
+int first = 5;
+int second = 7;
+string message5 = first.ToString() + second.ToString();
+Console.WriteLine(message5);
+
+
+string first = "5";
+string second = "7";
+int sum = int.Parse(first) + int.Parse(second);
+Console.WriteLine(sum);
+
+string value1 = "5";
+string value2 = "7";
+int result = Convert.ToInt32(value1) * Convert.ToInt32(value2);
+Console.WriteLine(result);
+
+
+
+int value = (int)1.5m; // casting truncates
+Console.WriteLine(value);
+
+int value2 = Convert.ToInt32(1.5m); // converting rounds up
+Console.WriteLine(value2);
+
+string name = "Bob";
+Console.WriteLine(int.Parse(name));
+
+//System.FormatException: 'Input string was not in a correct format.'
+
+string value = "102";
+int result = 0; // 102
+if (int.TryParse(value, out result))
+{
+    Console.WriteLine($"Measurement: {result}");
+}
+else
+{
+    Console.WriteLine("Unable to report the measurement.");
+}
+
+
+
+string value = "bad";
+int result = 0;
+if (int.TryParse(value, out result))
+{
+    Console.WriteLine($"Measurement: {result}");
+}
+else
+{
+    Console.WriteLine("Unable to report the measurement.");
+}
+
+// Since it is defined outside of the if statement, 
+// it can be accessed later in your code.
+if (result > 0)
+    Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+
+
+
+string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+
+// Rule 1: If the value is alphanumeric, concatenate it to form a message
+
+// Rule 2: If the value is numeric, add it to the total
+
+// Message: ABCDEF
+// Total: 68.3
+
+
+
+// >>Write a C# Sharp program to check whether a given number is positive or negative. 
+
+// int[ ] inventory = { "25" , "1" , "-45 , "27" , "-32" , "45', "6' }
+// int sum = 0
+// int bin = 0
+// foreach (int item in inventory)
+// { 
+//        int <=0
+//        bin++
+//      {
+//            If (inventory.int {<=0});
+//           {
+//                 Console.Writeline ($Bin {bin} = {items} Items (Running total : {positive int});
+//                       {
+//                             else (inventory.int {>0});
+//                                 {
+//                                            Console.Writeline ($Bin {bin} = {items} Items (Running total : {negative int});
+//                                    }
+//                         }
+//              }
+//       }
+
+// }
+
+// tell whether number is positive or negative 
+// Int Number : -67
+// {
+//    Console.WriteLine($"Number is positive : {number}");
+// }
+// else
+// {
+//     Console.WriteLine($"Number is negative : {number}");
+// }
+
+
+int value1 = 12;
+decimal value2 = 6.2m;
+float value3 = 4.3f;
+
+// Your code here to set result1
+Console.WriteLine($"Divide value1 by value2, display the result as an int: {result1}");
+
+// Your code here to set result2
+Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
+
+// Your code here to set result3
+Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
+
+// Divide value1 by value2, display the result as an int: 2
+// Divide value2 by value3, display the result as a decimal: 1.4418604651162790697674418605
+// Divide value3 by value1, display the result as a float: 0.3583333
+
+string[] pallets = { "B14", "A11", "B12", "A13" };
+
+Console.WriteLine("Sorted...");
+Array.Sort(pallets);
+
+foreach (var pallet in pallets)
+{
+    Console.WriteLine($"-- {pallet}");
+}
+
+Console.WriteLine("");
+Console.WriteLine("Reversed...");
+Array.Reverse(pallets);
+
+foreach (var pallet in pallets)
+{
+    Console.WriteLine($"-- {pallet}");
+}
+// Sorted...
+// -- A11
+// -- A13
+// -- B12
+// -- B14
+
+// Reversed...
+// -- B14
+// -- B12
+// -- A13
+// -- A11
